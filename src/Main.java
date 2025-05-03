@@ -13,7 +13,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         try {
-            String folderPath = "input/"; // Folder containing all input files (.txt)
+            String folderPath = "input/"; 
 
             File folder = new File(folderPath);
             File[] listOfFiles = folder.listFiles();
@@ -40,7 +40,7 @@ public class Main {
                     int maxFlow = algorithm.findMaxFlow(network, source, sink);
                     long endTime = System.nanoTime();
 
-                    double elapsedTimeMs = (endTime - startTime) / 1_000_000.0; // Convert nanoseconds to milliseconds
+                    double elapsedTimeMs = (endTime - startTime) / 1_000_000.0; 
 
                     // Print results
                     System.out.printf("File: %-20s | Max Flow: %-8d | Time: %.2f ms%n",
@@ -49,7 +49,7 @@ public class Main {
                     System.out.println("Final flow network:");
                     for (var edges : network.getGraph()) {
                         for (Edge e : edges) {
-                            if (e.capacity > 0) { // Only show original forward edges
+                            if (e.capacity > 0) { 
                                 System.out.println(e);
                             }
                         }
